@@ -1,0 +1,60 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-60753-bcjumg/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-60753-bcjumg/package.tgz",
+        "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-60753-bcjumg/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-1161121-60753-12s0fb8"
+    ]
+  ],
+  "_from": "../d-1161121-60753-bcjumg/package.tgz",
+  "_id": "html-id-class-snippets@1.4.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/html-id-class-snippets",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-60753-bcjumg/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-60753-bcjumg/package.tgz",
+    "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-60753-bcjumg/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-1161121-60753-bcjumg/package.tgz",
+  "_shasum": "abf52934267c2ca3377c6fe9572327c04f108836",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-60753-bcjumg/package.tgz",
+  "_where": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-1161121-60753-12s0fb8",
+  "bugs": {
+    "url": "https://github.com/acrogenesis/html-id-class-snippets/issues"
+  },
+  "dependencies": {},
+  "description": "HTML language snippets with easy access to id and class",
+  "devDependencies": {},
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "https://github.com/acrogenesis/html-id-class-snippets",
+  "license": "MIT",
+  "name": "html-id-class-snippets",
+  "optionalDependencies": {},
+  "readme": "HTML language snippets with easy access to id and class\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acrogenesis/html-id-class-snippets.git"
+  },
+  "version": "1.4.1"
+}
