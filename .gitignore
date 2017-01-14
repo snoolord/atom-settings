@@ -4,3 +4,9 @@ dev
 storage
 .node-gyp
 .npm
+
+packages/
+
+recovery/
+
+.apm/
