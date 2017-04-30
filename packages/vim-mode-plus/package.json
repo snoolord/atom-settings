@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117013-89338-bpkn46/package.tgz",
+        "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80780-o0gmke/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117013-89338-bpkn46/package.tgz",
-        "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117013-89338-bpkn46/package.tgz",
+        "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80780-o0gmke/package.tgz",
+        "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80780-o0gmke/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-117013-89338-187wk83"
+      "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-117115-80780-pv33qr"
     ]
   ],
-  "_from": "../d-117013-89338-bpkn46/package.tgz",
-  "_id": "vim-mode-plus@0.79.1",
+  "_from": "../d-117115-80780-o0gmke/package.tgz",
+  "_id": "vim-mode-plus@0.82.2",
   "_inCache": true,
   "_installable": true,
   "_location": "/vim-mode-plus",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117013-89338-bpkn46/package.tgz",
+    "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80780-o0gmke/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117013-89338-bpkn46/package.tgz",
-    "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117013-89338-bpkn46/package.tgz",
+    "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80780-o0gmke/package.tgz",
+    "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80780-o0gmke/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117013-89338-bpkn46/package.tgz",
-  "_shasum": "3c82c910a368612aaf8111a466ad69c9c622bf10",
+  "_resolved": "file:../d-117115-80780-o0gmke/package.tgz",
+  "_shasum": "867a0ebc6110671f4a1717232607e499eda9461e",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117013-89338-bpkn46/package.tgz",
-  "_where": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-117013-89338-187wk83",
+  "_spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80780-o0gmke/package.tgz",
+  "_where": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-117115-80780-pv33qr",
   "bugs": {
     "url": "https://github.com/t9md/atom-vim-mode-plus/issues"
   },
@@ -86,5 +86,5 @@
     "test": "apm test",
     "watch": "fswatch -0 spec lib | xargs -0 -n1 -I{} apm test"
   },
-  "version": "0.79.1"
+  "version": "0.82.2"
 }

@@ -2,5 +2,5 @@
   "removeAttribute":
     "prefix": "ra"
     "body": """
-    ${1:document}.removeAttribute('${2:attr}');
+    ${1:document}.removeAttribute('${2:attr}')
     """

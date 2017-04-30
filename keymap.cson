@@ -68,7 +68,7 @@
   # 'ctrl-a': 'vim-mode-plus:insert-last-inserted'
   'ctrl-r': 'vim-mode-plus:insert-register'
   'ctrl-o': 'vim-mode-plus:activate-normal-mode-once'
-
+  'j k': 'vim-mode-plus:activate-normal-mode'
 # Insert-replace
 # -------------------------
 'atom-text-editor.vim-mode-plus.insert-mode.replace':
@@ -80,14 +80,14 @@
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
   # Motions
   # -------------------------
-  'j': 'vim-mode-plus:move-left'
+  'h': 'vim-mode-plus:move-left'
   'left': 'vim-mode-plus:move-left'
   'backspace': 'core:move-left'
   'l': 'vim-mode-plus:move-right'
   'space': 'vim-mode-plus:move-right'
   'right': 'vim-mode-plus:move-right'
 
-  'i': 'vim-mode-plus:move-up'
+  'j': 'vim-mode-plus:move-up'
   'up': 'vim-mode-plus:move-up'
   'k': 'vim-mode-plus:move-down'
   'down': 'vim-mode-plus:move-down'
@@ -419,6 +419,7 @@
 # -------------------------
 'atom-text-editor.vim-mode-plus.normal-mode':
   'space': 'vim-mode-plus:activate-insert-mode'
+  'i': 'vim-mode-plus:activate-insert-mode'
   'a': 'vim-mode-plus:insert-after'
   'I': 'vim-mode-plus:insert-at-first-character-of-line'
   'A': 'vim-mode-plus:insert-after-end-of-line'
@@ -484,17 +485,14 @@
   'u': 'vim-mode-plus:lower-case'
 
   # Text object inner-, a- order
-  'i w': 'vim-mode-plus:inner-word'
   'a w': 'vim-mode-plus:a-word'
 
-  'i W': 'vim-mode-plus:inner-whole-word'
   'a W': 'vim-mode-plus:a-whole-word'
 
   # 'i w':  'vim-mode-plus:inner-smart-word'
   # 'a w':  'vim-mode-plus:a-smart-word'
 
   # [FIXME?] overridden Vim's sentence text object
-  'i s': 'vim-mode-plus:inner-any-pair'
   'a s': 'vim-mode-plus:a-any-pair'
 
   'i "': 'vim-mode-plus:inner-double-quote'
@@ -503,7 +501,6 @@
   "i '": 'vim-mode-plus:inner-single-quote'
   "a '": 'vim-mode-plus:a-single-quote'
 
-  "i q": 'vim-mode-plus:inner-any-quote'
   "a q": 'vim-mode-plus:a-any-quote'
 
   'i `': 'vim-mode-plus:inner-back-tick'
@@ -514,7 +511,6 @@
   'a {': 'vim-mode-plus:a-curly-bracket'
   'a }': 'vim-mode-plus:a-curly-bracket'
 
-  'i B': 'vim-mode-plus:inner-curly-bracket'
   'a B': 'vim-mode-plus:a-curly-bracket'
 
   'i <': 'vim-mode-plus:inner-angle-bracket'
@@ -532,7 +528,6 @@
   # 'i )':  'vim-mode-plus:inner-parenthesis-allow-forwarding'
   # 'a )':  'vim-mode-plus:a-parenthesis-allow-forwarding'
 
-  'i t': 'vim-mode-plus:inner-tag'
   'a t': 'vim-mode-plus:a-tag'
 
   'i [': 'vim-mode-plus:inner-square-bracket'
@@ -553,19 +548,14 @@
   'i /': 'vim-mode-plus:inner-comment'
   'a /': 'vim-mode-plus:a-comment'
 
-  'i i': 'vim-mode-plus:inner-indentation'
   'a i': 'vim-mode-plus:a-indentation'
 
-  'i z': 'vim-mode-plus:inner-fold'
   'a z': 'vim-mode-plus:a-fold'
 
-  'i f': 'vim-mode-plus:inner-function'
   'a f': 'vim-mode-plus:a-function'
 
-  'i l': 'vim-mode-plus:inner-current-line'
   'a l': 'vim-mode-plus:a-current-line'
 
-  'i e': 'vim-mode-plus:inner-entire'
   'a e': 'vim-mode-plus:a-entire'
 
   # [NOTE] subject to change in future
@@ -578,9 +568,6 @@
 
   'i v': 'vim-mode-plus:inner-visible-area'
   'a v': 'vim-mode-plus:a-visible-area'
-
-  # 'a q': 'vim-mode-plus:a-subword'
-  # 'i q': 'vim-mode-plus:inner-subword'
 
 # visual
 # -------------------------
@@ -638,14 +625,13 @@
 #     ']': 'vim-mode-plus:search-visit-next'
 #     'space': 'vim-mode-plus:search-insert-wild-pattern'
 
-
 'atom-workspace atom-text-editor':
-  'ctrl-cmd-i': 'editor:move-line-up'
+  'ctrl-cmd-j': 'editor:move-line-up'
   'ctrl-cmd-k': 'editor:move-line-down'
 
 '.autocomplete-active':
   'ctrl-k': 'core:move-down'
-  'ctrl-i': 'core:move-up'
+  'ctrl-j': 'core:move-up'
 
 
 'atom-text-editor.vim-mode:not(.insert-mode), .tree-view':
@@ -739,5 +725,18 @@
   'enter': 'core:confirm'
   'escape': 'core:cancel'
 
+
+  # Stop emmet from hijacking basic tabbing
+'atom-text-editor[data-grammar="text html basic"]:not([mini]),
+ atom-text-editor[data-grammar~="jade"]:not([mini]),
+ atom-text-editor[data-grammar~="css"]:not([mini]),
+ atom-text-editor[data-grammar~="sass"]:not([mini])':
+  'tab': 'snippets:next-tab-stop'
+
+# Emmet for JSX
+'atom-text-editor[data-grammar~="jsx"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'
+
+# Stop emmet from hijacking tab from snippets and autocomplete
 'atom-text-editor.autocomplete-active:not([mini])':
   'tab': 'autocomplete-plus:confirm'

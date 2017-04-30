@@ -1,8 +1,11 @@
 "*":
   "atom-material-ui":
     colors:
-      paintCursor: true
+      abaseColor: "#5c6bc0"
+      genAccent: true
+      predefinedColor: "Indigo"
     tabs:
+      compactTabs: true
       tintedTabBar: true
     treeView:
       blendTabs: true
@@ -11,34 +14,17 @@
       panelContrast: true
   core:
     audioBeep: false
-    customFileTypes:
-      "source.ini": [
-        ".buckconfig"
-        ".hgrc"
-        ".flowconfig"
-      ]
-      "source.json": [
-        ".arcconfig"
-        "BUCK.autodeps"
-      ]
-      "source.python": [
-        "BUCK"
-      ]
     disabledPackages: [
       "linter-rubocop"
-      "activate-power-mode"
-      "file-icons"
-      "atom-shortcuts"
-      "synced-sidebar"
-      "vim-mode"
+      "linter-scss-lint"
     ]
     packagesWithKeymapsDisabled: [
-      "vim-mode"
+      "vim-mode-plus"
     ]
     telemetryConsent: "no"
     themes: [
       "atom-material-ui"
-      "ariake-dark-syntax"
+      "nord-atom-syntax"
     ]
   editor:
     fontSize: 20
@@ -47,25 +33,24 @@
       space: " "
     preferredLineLength: 90
     scrollPastEnd: true
-    showInvisibles: true
     softWrapAtPreferredLineLength: true
-    tabLength: 4
   "exception-reporting":
-    userId: "app-academy"
+    userId: "winston-zhao"
   fonts:
     fontFamily: "Inconsolata"
-  "language-elm":
-    elmOraclePath: "/usr/local/bin/elm-oracle"
   linter:
-    errorPanelHeight: 26
+    errorPanelHeight: 180
     ignoreVCSIgnoredFiles: false
     lintOnFly: false
+    showErrorPanel: false
     showErrorTabLine: true
     showErrorTabProject: false
     statusIconScope: "File"
   "linter-eslint":
     globalNodePath: "/Users/winstonzhao/.nvm/versions/node/v6.2.1"
     useGlobalEslint: true
+  "linter-js-standard":
+    checkStyleDevDependencies: true
   "linter-rubocop":
     executablePath: "/Users/winstonzhao/.rbenv/shims/rubocop"
   "markdown-preview":
@@ -74,8 +59,8 @@
     plugins:
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
-  "tree-view":
-    hideVcsIgnoredFiles: true
-  "vim-mode": {}
+  "tree-view": {}
+  "vim-mode-plus":
+    useClipboardAsDefaultRegister: true
   welcome:
     showOnStartup: false

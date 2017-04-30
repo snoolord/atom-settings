@@ -38,6 +38,13 @@ export default {
             }
         }
     },
+    fileRelativePaths: {
+        type: 'boolean',
+        default: true,
+        title: 'File relative path completion',
+        description: 'Upon selecting a match, the path relative to the current file will be inserted.' +
+            ' Disabling this results in paths relative to the project'
+    },
     importTypes: {
         type: 'object',
         title: 'Import types for autocompletion',

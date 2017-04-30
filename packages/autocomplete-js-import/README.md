@@ -13,10 +13,11 @@ New Fuzzy matching (disabled by default)
 
 # Additional features
 * When project dependencies autocompletion is enabled, every root `package.json` is watched for changes
-* Autocomplete hidden (dot) files
+* Autocomplete hidden (dot) files (disabled by default)
 * Automatically remove unnecessary extensions (e.g. `./index.js` => `./index`) 
 
 
 # TODO / Known Issues
 * Fuzzy pattern matching doesn't work with files added/removed after project is added
 * Attempting to fuzzy search with slashes or periods inserts suggestion incorrectly
+* If it wasn't compatible with Windows before, it sure isn't now (Unix path specific code)

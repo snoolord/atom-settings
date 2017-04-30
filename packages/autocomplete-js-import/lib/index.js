@@ -8,6 +8,9 @@ import path from 'path';
 import glob from 'glob';
 import uniq from 'lodash.uniq';
 
+// TODO: check windows compatibility
+const PATH_DELIMITER = '/';
+
 function readFilePromise(path) {
     return new Promise(resolve => {
         fs.readFile(path, (err, data) => resolve({
@@ -52,7 +55,7 @@ export default {
         const settings = atom.config.get(PACKAGE_NAME);
         const projectPaths = atom.project.getPaths();
 
-        this._settingsObservers.push(...['hiddenFiles', 'fuzzy', 'projectDependencies'].map(setting =>
+        this._settingsObservers.push(...['hiddenFiles', 'fuzzy', 'fileRelativePaths', 'projectDependencies'].map(setting =>
             atom.config.onDidChange(`${PACKAGE_NAME}.${setting}`, () => {
                 // Just wipe everything and start fresh, relatively expensive but effective
                 this.deactivate();
@@ -109,25 +112,46 @@ export default {
 
     _buildProjectFilesList(projectPaths, {excludedDirs, fileTypes, showHidden}) {
         projectPaths.forEach(p => {
-            let fileTypeMatcher = '/*';
 
-            // TODO: put this filematching logic into a utility
-            if (fileTypes.length && fileTypes[0] !== '*') {
-                fileTypeMatcher += `.{${fileTypes.join(',')}}`
-            }
+            // Join together our desired file extensions, like "ts,js,jsx,json"
+            // if necessary. Glob will fail if you give it just one extension
+            // like "js" so handle that case separately.
+            const fileTypeSet = fileTypes.length === 1 ? fileTypes[0] : `{${fileTypes.join(',')}}`;
 
-            // the double matching is done to check the top level dir :-/
-            let globPattern = '{' + p + fileTypeMatcher + ',' + p;
+            // Create our base glob like "/path/to/project/**/*.{ts,js,jsx,json}"
+            const globPattern = `${p}/**/*.${fileTypeSet}`;
 
-            // TODO: make this work with non top level dirs
-            if (excludedDirs.length) {
-                globPattern += `/!(${excludedDirs.join('|')})`;
-            }
+            // Use the ignore option to exclude the given directories anywhere
+            // including a subpath.
+            const ignore = excludedDirs.map(dir => `${p}/**/${dir}/**`); // like ["/path/to/project/**/node_modules/**", etc.]
 
-            globPattern += '/**' + fileTypeMatcher + '}';
+            glob(globPattern, {dot: showHidden, nodir: true, ignore}, (err, childPaths) => {
+                this.filesMap.set(
+                    p,
+                    childPaths
+                        // Ensure no empty paths
+                        .filter(Boolean)
+                        // We want shortest paths to appear first when searching so sort based on total path parts
+                        // then alphabetically
+                        // E.G Searching for index.js should appear as so:
+                        // 1. index.js
+                        // 2. some/path/index.js
+                        // 3. some/long/path/index.js
+                        // 4. some/longer/path/index.js
+                        // If we used Glob's output directly, the shortest paths appear last,
+                        // which can cause non unique filenames with short paths to be unsearchable
+                        .sort((a, b) => {
+                            const pathDifference = a.split(PATH_DELIMITER).length - b.split(PATH_DELIMITER).length;
 
-            glob(globPattern, {dot: showHidden, nodir: true}, (err, childPaths) => {
-                this.filesMap.set(p, childPaths.map(child => path.relative(p, child)));
+                            if (pathDifference !== 0) {
+                                return pathDifference;
+                            }
+
+                            return a.localeCompare(b);
+                        })
+                        .map(child => path.relative(p, child)
+                    )
+                );
             });
         });
     },

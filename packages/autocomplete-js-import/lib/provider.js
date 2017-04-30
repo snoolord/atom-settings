@@ -9,7 +9,7 @@ import {
     dropExtensions,
     getParentDir,
     getDirAndFilePrefix
- } from './utils';
+} from './utils';
 import * as Fuzzy from 'fuzzy';
 import path from 'path';
 import fs from 'fs';
@@ -66,7 +66,7 @@ export default class ImportCompletionProvider {
 
                 // This is last to give more precedence to package and local file name matches
                 if (settings.fuzzy.enabled) {
-                    results.push(...this._findInFiles(editor.getPath(), packageName, 6, settings.removeExtensions));
+                    results.push(...this._findInFiles(editor.getPath(), packageName));
                 }
 
                 return results;
@@ -108,12 +108,12 @@ export default class ImportCompletionProvider {
      * @param  {String} editorPath
      * @param  {String} stringPattern
      * @param  {Number} max
-     * @param  {Array<String>} removeExtensionsSetting - array of extensions to remove from results
      * @return {Array<Object<text: String, displayText: String>>}
      */
-    _findInFiles(editorPath, stringPattern, max, removeExtensionsSetting) {
+    _findInFiles(editorPath, stringPattern, max = 6) {
         const rootDirs = atom.project.getDirectories();
         const containingRoot = rootDirs.find(dir => dir.contains(editorPath));
+		const settings = atom.config.get('autocomplete-js-import');
         const results = [];
 
         if (!containingRoot) {
@@ -136,11 +136,19 @@ export default class ImportCompletionProvider {
                     currFileRelativePath = './' + currFileRelativePath;
                 }
 
-                currFileRelativePath = dropExtensions(currFileRelativePath, removeExtensionsSetting);
-
-                // Show the full path because it lines up with what the user is typing,
-                // but just insert the path relative to the user's current file
-                results.push({text: currFileRelativePath, displayText: rootRelativePath});
+                // Show the full path because it aligns with what the user is typing,
+                if (settings.fileRelativePaths) {
+                    // just insert the path relative to the user's current file
+                    results.push({
+                        text: dropExtensions(currFileRelativePath, settings.removeExtensions),
+                        displayText: rootRelativePath
+                    });
+                } else {
+                    results.push({
+                        text: dropExtensions(rootRelativePath, settings.removeExtensions),
+                        displayText: rootRelativePath
+                    });
+                }
             }
         }
 

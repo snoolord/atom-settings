@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117011-55506-wb800j/package.tgz",
+        "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80704-1dqwl1i/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117011-55506-wb800j/package.tgz",
-        "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117011-55506-wb800j/package.tgz",
+        "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80704-1dqwl1i/package.tgz",
+        "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80704-1dqwl1i/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-117011-55506-1uxtrrz"
+      "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-117115-80704-12b0hd0"
     ]
   ],
-  "_from": "../d-117011-55506-wb800j/package.tgz",
-  "_id": "fonts@1.8.0",
+  "_from": "../d-117115-80704-1dqwl1i/package.tgz",
+  "_id": "fonts@2.0.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/fonts",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117011-55506-wb800j/package.tgz",
+    "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80704-1dqwl1i/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117011-55506-wb800j/package.tgz",
-    "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117011-55506-wb800j/package.tgz",
+    "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80704-1dqwl1i/package.tgz",
+    "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80704-1dqwl1i/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117011-55506-wb800j/package.tgz",
-  "_shasum": "81d8d446c5f27cadf6db81f41974d6047d82bf9d",
+  "_resolved": "file:../d-117115-80704-1dqwl1i/package.tgz",
+  "_shasum": "b1e6f9dc14b9bf5b790fdcd4078cb50e96858dc0",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117011-55506-wb800j/package.tgz",
-  "_where": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-117011-55506-1uxtrrz",
+  "_spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80704-1dqwl1i/package.tgz",
+  "_where": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-117115-80704-12b0hd0",
   "bugs": {
     "url": "https://github.com/braver/fonts/issues"
   },
@@ -63,6 +63,8 @@
         "Cutive Mono",
         "DejaVu Mono",
         "Droid Sans Mono",
+        "Droid Sans Mono Dotted",
+        "Droid Sans Mono Slashed",
         "Effects Eighty",
         "Fantasque Sans Mono",
         "Fifteen",
@@ -79,6 +81,8 @@
         "Gohufont 14",
         "Hack",
         "Hasklig",
+        "Hasklig Light",
+        "Hasklig Medium",
         "Hermit Light",
         "Hermit",
         "Inconsolata",
@@ -92,6 +96,7 @@
         "Latin Modern Mono",
         "Lekton",
         "Liberation Mono",
+        "Luculent",
         "Luxi Mono",
         "M+ Light",
         "M+ Medium",
@@ -107,6 +112,7 @@
         "Office Code Pro Light",
         "Office Code Pro Medium",
         "Oxygen Mono",
+        "Overpass Mono",
         "PT Mono",
         "Profont",
         "Proggy Clean",
@@ -121,6 +127,7 @@
         "Source Code Pro Light",
         "Source Code Pro Medium",
         "Source Code Pro",
+        "Space Mono",
         "Sudo",
         "TeX Gyre Cursor",
         "Ubuntu Mono",
@@ -134,7 +141,7 @@
   "description": "Lots of monospace fonts.",
   "devDependencies": {},
   "engines": {
-    "atom": ">=1.1.0 <2.0.0"
+    "atom": ">=1.13.0 <2.0.0"
   },
   "homepage": "https://github.com/braver/fonts#readme",
   "keywords": [
@@ -154,5 +161,5 @@
     "type": "git",
     "url": "git+https://github.com/braver/fonts.git"
   },
-  "version": "1.8.0"
+  "version": "2.0.0"
 }

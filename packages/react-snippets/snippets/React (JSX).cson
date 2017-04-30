@@ -1,11 +1,19 @@
 ".source.js":
+  "React: import empty()":
+    prefix: "_i"
+    body: "import ${1} from '${2}';"
+
   "React: import()":
     prefix: "_ir"
-    body: "import React from 'react'"
+    body: "import React from 'react';"
+
+  "React: import() with PropTypes":
+    prefix: "_irp"
+    body: "import React, { PropTypes } from 'react';"
 
   "React: import react-dom()":
     prefix: "_ird"
-    body: "import ReactDOM from 'react-dom'"
+    body: "import ReactDOM from 'react-dom';"
 
   "React: componentDidMount() { ... }":
     prefix: "_cdm"
@@ -51,9 +59,29 @@
     prefix: "_ism"
     body: "isMounted()"
 
+  "React: Class.contextTypes = { ... }":
+    prefix: "_cct"
+    body: "${1}.contextTypes = {\n\t${2}: React.PropTypes.${3:string}\n};"
+
   "React: Class.propTypes = { ... }":
     prefix: "_cpt"
     body: "${1}.propTypes = {\n\t${2}: React.PropTypes.${3:string}\n};"
+
+  "React: Class.defaultProps = { ... }":
+    prefix: "_cdp"
+    body: "${1}.defaultProps = {\n\t${2}: ${3}\n};"
+
+  "React: static contextTypes = { ... }":
+    prefix: "_scct"
+    body: "static contextTypes = {\n\t${1}: PropTypes.${2:string}\n}"
+
+  "React: static propTypes = { ... }":
+    prefix: "_scpt"
+    body: "static propTypes = {\n\t${1}: PropTypes.${2:string}\n}"
+
+  "React: static defaultProps = { ... }":
+    prefix: "_scdp"
+    body: "static defaultProps = {\n\t${1}: ${2}\n}"
 
   "React: propTypes { ... }":
     prefix: "_pt"
@@ -65,11 +93,11 @@
 
   "React: class skeleton":
     prefix: "_cer"
-    body: "import React from 'react';\n\nclass ${1} extends React.Component {\n\n\trender() {\n\t\treturn (\n\t\t\t${2:<div />}\n\t\t);\n\t}\n\n}\n\nexport default ${1};"
+    body: "import React from 'react';\n\nclass ${1} extends React.Component {\n\n\trender() {\n\t\treturn (\n\t\t\t${2:<div></div>}\n\t\t);\n\t}\n\n}\n\nexport default ${1};"
 
   "React: createClass skeleton":
     prefix: "_rcc"
-    body: "import React from 'react';\n\nexport default React.createClass({\n\n\trender() {\n\t\treturn (\n\t\t\t${1:<div />}\n\t\t);\n\t}\n\n});"
+    body: "import React from 'react';\n\nexport default React.createClass({\n\n\trender() {\n\t\treturn (\n\t\t\t${1:<div></div>}\n\t\t);\n\t}\n\n});"
 
   "React: Stateless Component":
     prefix: "_rsc"
@@ -85,7 +113,7 @@
 
   "React: render() { return ... }":
     prefix: "_ren"
-    body: "render() {\n\treturn (\n\t\t${1:<div />}\n\t);\n}"
+    body: "render() {\n\treturn (\n\t\t${1:<div></div>}\n\t);\n}"
 
   "React: setState({ ... })":
     prefix: "_sst"

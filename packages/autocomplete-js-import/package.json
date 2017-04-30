@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-89782-2ep0j/package.tgz",
+        "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80678-1yfwske/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-89782-2ep0j/package.tgz",
-        "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-89782-2ep0j/package.tgz",
+        "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80678-1yfwske/package.tgz",
+        "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80678-1yfwske/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-1161121-89782-14dk1y"
+      "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-117115-80678-vud231"
     ]
   ],
-  "_from": "../d-1161121-89782-2ep0j/package.tgz",
-  "_id": "autocomplete-js-import@1.2.1",
+  "_from": "../d-117115-80678-1yfwske/package.tgz",
+  "_id": "autocomplete-js-import@1.4.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/autocomplete-js-import",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-89782-2ep0j/package.tgz",
+    "raw": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80678-1yfwske/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-89782-2ep0j/package.tgz",
-    "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-89782-2ep0j/package.tgz",
+    "rawSpec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80678-1yfwske/package.tgz",
+    "spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80678-1yfwske/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161121-89782-2ep0j/package.tgz",
-  "_shasum": "30968b1f92720686575665ef81c0992ece6084f8",
+  "_resolved": "file:../d-117115-80678-1yfwske/package.tgz",
+  "_shasum": "160c3cda78289618044641d9ffbe470bf543cbaf",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-1161121-89782-2ep0j/package.tgz",
-  "_where": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-1161121-89782-14dk1y",
+  "_spec": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/d-117115-80678-1yfwske/package.tgz",
+  "_where": "/private/var/folders/2c/w5645bnj23v3sldqgcyh7t4c0000gn/T/apm-install-dir-117115-80678-vud231",
   "author": {
     "name": "Daniel Garcia-Carrillo"
   },
@@ -76,7 +76,7 @@
       }
     }
   },
-  "readme": "# autocomplete-js-import\nAutocomplete+ provider for JS import statements\n\nAutocompletes ES6 or CommonJS (node) style import statements with relative file matching, full project fuzzy file matching or packages found in `package.json`.\n\nBy default, plugin will only allow autocompletion in the form of relative paths:\n\n![import local files screenshot](https://raw.githubusercontent.com/DanielGarcia-Carrillo/autocomplete-js-import/master/misc/autocomplete-screenshot.png)\n\nNew Fuzzy matching (disabled by default)\n\n![](https://raw.githubusercontent.com/DanielGarcia-Carrillo/autocomplete-js-import/master/misc/fuzzy-matching.gif)\n\n# Additional features\n* When project dependencies autocompletion is enabled, every root `package.json` is watched for changes\n* Autocomplete hidden (dot) files\n* Automatically remove unnecessary extensions (e.g. `./index.js` => `./index`) \n\n\n# TODO / Known Issues\n* Fuzzy pattern matching doesn't work with files added/removed after project is added\n* Attempting to fuzzy search with slashes or periods inserts suggestion incorrectly\n",
+  "readme": "# autocomplete-js-import\nAutocomplete+ provider for JS import statements\n\nAutocompletes ES6 or CommonJS (node) style import statements with relative file matching, full project fuzzy file matching or packages found in `package.json`.\n\nBy default, plugin will only allow autocompletion in the form of relative paths:\n\n![import local files screenshot](https://raw.githubusercontent.com/DanielGarcia-Carrillo/autocomplete-js-import/master/misc/autocomplete-screenshot.png)\n\nNew Fuzzy matching (disabled by default)\n\n![](https://raw.githubusercontent.com/DanielGarcia-Carrillo/autocomplete-js-import/master/misc/fuzzy-matching.gif)\n\n# Additional features\n* When project dependencies autocompletion is enabled, every root `package.json` is watched for changes\n* Autocomplete hidden (dot) files (disabled by default)\n* Automatically remove unnecessary extensions (e.g. `./index.js` => `./index`) \n\n\n# TODO / Known Issues\n* Fuzzy pattern matching doesn't work with files added/removed after project is added\n* Attempting to fuzzy search with slashes or periods inserts suggestion incorrectly\n* If it wasn't compatible with Windows before, it sure isn't now (Unix path specific code)\n",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
@@ -85,5 +85,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.2.1"
+  "version": "1.4.0"
 }
